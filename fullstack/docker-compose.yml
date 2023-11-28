@@ -17,7 +17,7 @@ services:
     ports:
       - 3305:3305
     healthcheck:
-      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost" ]
       timeout: 1s
       retries: 5
 
@@ -49,4 +49,3 @@ services:
 volumes:
   control-posts-node-modules:
   main:
-      
