@@ -74,7 +74,20 @@ paths:
           name: user
           description: create user
           schema:
-            $ref: "#/definitions/user"
+            additionalProperties: false
+            type: "object"
+            required:
+              - "full_name"
+              - "user_email"
+              - "user_password"
+            properties:
+              full_name:
+                type: "string"
+              user_email:
+                type: "string"
+              user_password:
+                type: "string"
+                minLength: 5
       responses:
         200:
           description: "success"
