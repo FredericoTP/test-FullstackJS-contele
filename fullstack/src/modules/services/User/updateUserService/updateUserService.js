@@ -36,7 +36,7 @@ const updateUserService = async ({
         updatedUser: {
             id,
             user_email,
-            user_password,
+            user_password: crypt_password,
             full_name
         }
     };
