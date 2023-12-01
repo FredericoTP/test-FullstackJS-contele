@@ -13,14 +13,13 @@ const createPostRepositories = async ({
     try {
         const post_created = await transaction('posts').insert(post)
         
-        const has_response = !Array.isArray(post_created) && post_created.length > 0;
+        const has_response = Array.isArray(post_created) && post_created.length > 0;
 
         if (!has_response) {
             return {
                 post_created: []
             }
         }
-
 
         return {
             post_created
