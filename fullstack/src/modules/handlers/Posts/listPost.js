@@ -11,7 +11,7 @@ const listPostHandler = async (req, res, next) => {
         const {
             user_id
         } = req.query;
-        
+
         const {
             posts
         } = await getPostByUserIdService({
