@@ -21,6 +21,8 @@ const createPostRepositories = async ({
             }
         }
 
+        await commitTransaction({transaction})
+
         return {
             post_created
         }
