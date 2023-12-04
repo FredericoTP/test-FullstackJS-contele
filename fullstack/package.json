@@ -22,7 +22,8 @@
     "nodemon": "^2.0.16"
   },
   "scripts": {
-    "start": "node ."
+    "start": "node .",
+    "test": "jest"
   },
   "author": "",
   "license": "ISC"
